@@ -1,0 +1,30 @@
+{% extends "comments_form.html" %}
+
+{% block comments %}
+<div class="comments">
+	<h3>What did others say?</h3>
+	{% if comments %}
+	<p>Others have been here before you. Now hear their voices.</p>	
+	<ul>
+		{% for comment in comments %}
+		<li><strong>
+			{% if comment.author %}
+				{{ comment.author }}
+			{% else %}
+				Anonymous
+			{% endif %}
+			</strong> wrote
+			{% if comment.date %}
+				 on {{ comment.date }} :
+			{% else %}
+				 :
+			{% endif %}
+			{{ comment.comment }}
+		</li>
+		{% endfor %}
+		</ul>
+	{% else %}
+	<p>There are no comments.</p>	
+	{% endif %}
+</div>
+{% endblock %}

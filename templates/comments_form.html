@@ -1,0 +1,29 @@
+{% extends "unit_4.html" %}
+
+{% block comments_form %}
+<div class="comments_form">
+	<h3>Did I miss anything?</h3>
+	<p>We all let things fall through the cracks. Please let me know if you think I should add or change something.</p>	
+	<form method="post">  
+		<label for="author">Your name:</label>
+		<br>
+		<input type="text" name="author" value="{{ author }}">
+		<br>
+		<br>
+		<div>
+		<label for="comment">Your Comment:</label>
+		<br>
+		<textarea name="comment" value="{{ comment }}" rows="3" cols="60"></textarea></div>
+		<br>
+	    <div><input type="submit" value="Post Comment"></div>
+	    <br>
+	    {% if error %}
+	    <div class="error">Something's not right. Please provide me with some real feedback!</div>
+	    {% endif%}
+	</form> 
+</div>
+
+{% block comments %}
+{% endblock %}
+
+{% endblock %}

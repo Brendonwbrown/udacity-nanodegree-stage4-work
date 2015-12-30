@@ -1,0 +1,203 @@
+{% extends "main.html" %}
+
+{% block content %}
+	<section>
+		<h2>Introduction to Networks</h2>
+		<ul>
+			<li>
+				<ul class="secondary_list">
+					<li><h3>Networks</h3></li>
+					<li>A network is a group of entities that can communicate, even though they are no all directly connected.</li>
+					<li>The internet is a special kind of network.</li>
+					<li>The message has to be encoded in a way that all nodes understand</li>
+					<li>Routing instructions - send messages between specific points requires instructions to notes passing the message on.</li>
+					<li>Priority and permissions on the network.</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="secondary_list">
+					<li><h3>Measuring Networks</h3></li>
+					<li>Latency is the time it takes to send a message from source to destination.</li>
+					<li>Bandwith is the amount of information which can be transmitted per unit of time.</li>
+					<li>Bandwidth / time is measured for the internet in bits/second.</li>
+					<li>1 bit is the answer to 1 yes/no question, or 0/1.</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="secondary_list">
+					<li><h3>Protocols</h3></li>
+					<li>A protocol is the set of rules used by a client to communicate with a server.</li>
+					<li>Web protocol is Hypert Text Transfer Protocol</li>
+					<li>Browser submits a web request to server, server sends the answer.</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="secondary_list">
+					<li><h3>HTML Document Structure</h3></li>
+					<li>Include a simple doctype</li>
+					<li>The head includes a TITLE, some META items and LINK items to style and script.</li>
+					<li>Most everything else goes in the BODY section.</li>
+					<li>URLs are composed of the PROTOCOL, HOSTNAME and PATH.</li>
+					<li>A URL can also contain some QUERY information, which includes a question mark and NAME=PARAMETER. Multiple queries are strung together with & .</li>
+					<li>A FRAGMENT is used to reference a part of the page. Not sent to the server - last in the URL preceded by #</li>
+					<li>A PORT goes right after the HOSTNAME. It's necessary to make the connection to the host - by default, HTML goes over 80.</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="secondary_list">
+					<li><h3>HTTP request lines.</h3></li>
+					<li>The HTTP protocol is the protocol used to talk with a web server.</li>
+					<li>A request line: METHOD, then PATH, then VERSION</li>
+					<li>METHOD can use GET or POST, VERSION can be 1.0 or 1.1</li>
+					<li>A request line is followed by HEADERS. NAME:VALUE. "Host:www.example.com, User-Agent:Chrome</li>
+					<li>STATUS LINE contains HTTP VERSION, STATUS CODE and REASON PHRASE. This can be 200, 302, 404, 500.</li>
+					<li>HEADERS also apply, some are mandatory.</li>
+]				</ul>
+			</li>
+			<li>
+				<ul class="secondary_list">
+					<li><h3>Web applications Intro</h3></li>
+					<li>A client can request static or dynamic content.</li>
+					<li>There's static html and images and documents.</li>
+					<li>There are pages built on the fly.</li>
+				</ul>
+			</li>
+			<li>
+		</ul>
+	</section>
+	<section>
+		<h2>Introduction to Forms</h2>
+		<ul>
+			<li>
+				<ul class="secondary_list">
+					<li><h3>What are Forms?</h3></li>
+					<li>Use the FORM tag to introduct a form.</li>
+					<li>The INPUT tag takes some form of user content. Add a NAME attribute.</li>
+					<li>INPUT tags take a TYPE attribute which drastically assists building a form.</li>
+					<li>TEXT, CHECKBOX, SUBMIT, RADIO...</li>
+					<li>Add a LABEL element around the INPUT or use the FOR parameter to assign it.</li>
+					<li>A SELECT tag containing OPTION tags creates a dropdown list.</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<h2>Some Additional Tools</h2>
+		<ul>
+			<li>
+				<ul class="secondary_list">
+					<li><h3>Modulo</h3></li>
+					<li>Modulo (%) gives the remainder. Divide something by something. If there's leftover...</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="secondary_list">
+					<li><h3>Dictionary</h3></li>
+					<li>There are strings "..."</li>
+					<li>There are lists = ['brendon', 'wayne','brown']</li>
+					<li>There are dictionaries = &#123'first':'brendon','middle':'wayne','last':'brown'</li>
+					<li>Dictionaries will return the value when the key is invoke like so: d[k]</li>
+					<li>Or 'print KEY in DICTIONARY'</li>
+					<li>Update a dictionary with DICTIONARY['KEY']=VALUE</li>
+					<li>A Dictionary can contain a whole dictionary! Return contents with multiple square brackets and keys: DICTIONARY[KEY][KEY]</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<h2>Validation</h2>
+		<ul>
+			<li>
+				<ul class="secondary_list">
+					<li><h3>What is validation?</h3></li>
+					<li>We need to ensure users enter the content that pertains to the question or label.</li>
+					<li>HTML has some validation built in. Otherwise we can use Python to validate input content.</li>
+					<li>A user sends a GET request. The server returns form data. User POSTs the form information. Server validates POST on the way in and either approves or returns form data and an error</li>
+					<li>Verify input, detect errors, render old form with additional error message.</li> 
+					<li>Don't forget to "escape" some of the characters that could mess up your HTML.</li>
+					<li>Redirect user to a new page when they are successful.</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<h2>Templates</h2>
+		<ul>
+			<li>
+				<ul class="secondary_list">
+					<li><h3>HTML Templating</h3></li>
+					<li>A template library is a library to build complicated strings in html.</li>
+					<li>JINJA!</li>
+					<li>Variable substitution with &#123&#123 curly braces &#125&#125</li>
+					<li>Statements with &#123% Statement %&#125 &#123% End Statement %&#125</li>
+					<li>For loops: &#123% for statement %&#125 &#123% end statement %&#125</li>
+					<li>Templating plugins should include auto escaping stuff.</li>
+					<li>Minimize code in templates.</li>
+					<li>Minimize html in code.</li>
+					<li></li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<h2>Databases</h2>
+		<ul>
+			<li>
+				<ul class="secondary_list">
+					<h3>What is a database.</h3>
+					<li>A program that stores and retrieves large amounts of data.</li>
+					<li>A database can also refer to a machine or system of machines hosting this data.</li>
+					<li>The browser asks the server for infomation, so the server calls it up from a database.</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="secondary_list">
+					<h2>Tables</h2>
+					<li>A database is composed of tables.</li>
+					<li>Tables are composed of columns and rows.</li>
+					<li>Columns have types: integer, date, string (varchar)...</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="secondary_list">
+					<h2>Why Databases?</h2>
+					<li>Querying data by hand is tedious, slow and processor intensive.</li>
+					<li>SQL databases are relational: Postgresql, Mysql, Sqlite, Oracle...</li>
+					<li>Google AppEngine Datastore</li>
+					<li>Amazon Dynamo</li>
+					<li>NoSQL, MongoDB, Couch...</li>
+					<li>There are plenty of options - choose the one that fits the situation best.</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="secondary_list">
+					<h2>SQL</h2>
+					<li>Structured Query Language</li>
+					<li>Invented in the 1970s</li>
+					<li>SELECT * FROM links WHERE id = 5</li>
+					<li>Indexes significantly speed up read times. Hashtables can be used for indexes, each entry is about the same time to lookup,but they lose sorting info. Trees are sorted, but lookups are slower and they vary in time.</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="secondary_list">
+					<h2>ACIC</h2>
+					<li>Atomicity - All parts of a transaction succeed or fail together. Don't allow adding a row without ALL columns filled.</li>
+					<li>Consistency - consistent databasing - update the score, update the user's karma.</li>
+					<li>Isolation - no transaction can interfere with another's. An upvote and downvote cannot done via the same transaction.</li>
+					<li>Durability - Once the transaction is committed it will not be lost. Backups...</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="secondary_list">
+					<h2>Google App Engine Database</h2>
+					<li>Tables are called entities.</li>
+					<li>Columns are not fixed.</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+
+	{% block comments_form %}
+	{% endblock %}
+
+{% endblock %}
