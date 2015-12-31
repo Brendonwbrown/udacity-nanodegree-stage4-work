@@ -45,21 +45,24 @@
 			</li>
 			<li>
 				<ul class="secondary_list">
-					<li><h3>HTTP request lines.</h3></li>
+					<li><h3>HTTP request and response lines.</h3></li>
 					<li>The HTTP protocol is the protocol used to talk with a web server.</li>
-					<li>A request line: METHOD, then PATH, then VERSION</li>
+					<li>A request line contains a METHOD, then PATH, then HTTP VERSION</li>
 					<li>METHOD can use GET or POST, VERSION can be 1.0 or 1.1</li>
 					<li>A request line is followed by HEADERS. NAME:VALUE. "Host:www.example.com, User-Agent:Chrome</li>
-					<li>STATUS LINE contains HTTP VERSION, STATUS CODE and REASON PHRASE. This can be 200, 302, 404, 500.</li>
-					<li>HEADERS also apply, some are mandatory.</li>
-]				</ul>
+					<li>Requesting info from the server is only part of the equation, the server also responds in its own way</li>
+					<li>The response comes in a STATUS LINE containing an HTTP VERSION, STATUS CODE and REASON PHRASE. 
+					<li>Status codes can begin with 2 through 5.</li>
+					<li>200 means status is OK, 302 when the resource is found, 404 when a resource is not found, and 500 when there's a server error.</li>
+					<li>HEADERS also are returned: date, server software, content type and content length. Sending back server software is not a great idea, and not all returned headers are relevant.</li>
+				</ul>
 			</li>
 			<li>
 				<ul class="secondary_list">
 					<li><h3>Web applications Intro</h3></li>
 					<li>A client can request static or dynamic content.</li>
-					<li>There's static html and images and documents.</li>
-					<li>There are pages built on the fly.</li>
+					<li>There's static html pages built composed of text, images and documents.</li>
+					<li>There are other pages built on the fly and compiled into browser-readable information with server-side software.</li>
 				</ul>
 			</li>
 			<li>
@@ -110,12 +113,14 @@
 			<li>
 				<ul class="secondary_list">
 					<li><h3>What is validation?</h3></li>
-					<li>We need to ensure users enter the content that pertains to the question or label.</li>
-					<li>HTML has some validation built in. Otherwise we can use Python to validate input content.</li>
-					<li>A user sends a GET request. The server returns form data. User POSTs the form information. Server validates POST on the way in and either approves or returns form data and an error</li>
+					<li>Not everyone who interacts with our website will be good intentioned - allowing input means making our site vulnerable.</li>
+					<li>We also need to ensure well-intention users enter relevant content. People make mistakes. We can help them enter numbers in the number fields and emails in the email fields.</li>
+					<li>HTML has some validation built in. Otherwise we can use Python to validate input content on the server side.</li>
+					<li>A user sends a GET request. The server returns form data. User POSTs the form information. Server validates POST on the way in and either approves or returns form data and an error.</li>
 					<li>Verify input, detect errors, render old form with additional error message.</li> 
 					<li>Don't forget to "escape" some of the characters that could mess up your HTML.</li>
 					<li>Redirect user to a new page when they are successful.</li>
+					<li>Not validating input could allow someone to inject their own code to steal authentication information, or at best, code to mess up site visual appearance.</li>
 				</ul>
 			</li>
 		</ul>
@@ -126,7 +131,10 @@
 			<li>
 				<ul class="secondary_list">
 					<li><h3>HTML Templating</h3></li>
-					<li>A template library is a library to build complicated strings in html.</li>
+					<li>A template library is a library to build complicated strings in HTML.</li>
+					<li>Using templates allows for building complex applications, like blocks added to scaffolding.</li>
+					<li>This also allows us to reuse chunks of HTML on several different pages. This also means that if we need to make a change reflected on all the pages, we only need to make it once.</li>
+					<li>Templating allows for easier debugging and updating.</li>
 					<li>JINJA!</li>
 					<li>Variable substitution with &#123&#123 curly braces &#125&#125</li>
 					<li>Statements with &#123% Statement %&#125 &#123% End Statement %&#125</li>
