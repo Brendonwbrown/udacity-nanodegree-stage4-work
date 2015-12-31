@@ -65,4 +65,5 @@ li {
 .error {
 	border: red 1px solid;
 	padding: 1em;
+	margin-top: 1em;
 }
