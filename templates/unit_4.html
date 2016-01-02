@@ -131,16 +131,19 @@
 			<li>
 				<ul class="secondary_list">
 					<li><h3>HTML Templating</h3></li>
-					<li>A template library is a library to build complicated strings in HTML.</li>
+					<li>One of the main principles of programming is DRY. Don't Repeat Yourself. Projects overall end up overwhelmingly complex; by breaking up projects into chunks, assigning repeated strings, integers or functions to meaningful variables, we end up instroducing some manageability to our projects, and can spend less time managing and more time solving problems.  </li> 
+					<li>Templating systems and libraries satisfy this principle by allowing us to divide our projects into smaller components while using variable substitution to create dynamic, complicated strings in HTML.</li>
 					<li>Using templates allows for building complex applications, like blocks added to scaffolding.</li>
-					<li>This also allows us to reuse chunks of HTML on several different pages. This also means that if we need to make a change reflected on all the pages, we only need to make it once.</li>
-					<li>Templating allows for easier debugging and updating.</li>
+					<li>This also allows us to reuse chunks of HTML on several different pages. This also means that if we need to make a change reflected on all the pages, we only need to make it once. For instance, when the header and footer are the same on many pages, if we are using templates, we only have to build them once and updated them once to have changes reflected on all pages.</li>
+					<li>Templating allows for easier debugging and updating. If there's a bug on an element, imagine having to fix it once, and then copy>paste it to each relevant page. What a time sink!</li>
+					<li>Without templates, our code is ugly and jumbled, hard to search, and multiple languages get mixed and confusing. We also lose out on sytax hilighting.</li>
+					<li>Without templates, errors happen way too easily and are harder to debug.</li>
 					<li>JINJA!</li>
-					<li>Variable substitution with &#123&#123 curly braces &#125&#125</li>
-					<li>Statements with &#123% Statement %&#125 &#123% End Statement %&#125</li>
+					<li>Use variable substitution with &#123&#123 curly braces &#125&#125</li>
+					<li>Emply statements with &#123% Statement %&#125 &#123% End Statement %&#125</li>
 					<li>For loops: &#123% for statement %&#125 &#123% end statement %&#125</li>
 					<li>Templating plugins should include auto escaping stuff.</li>
-					<li>Minimize code in templates.</li>
+					<li>Minimize the amount of code you put into templates.</li>
 					<li>Minimize html in code.</li>
 					<li></li>
 				</ul>
